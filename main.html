@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<link rel="stylesheet" href="main.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <button onclick="switchTab('home')" class="nav-link"><i data-lucide="home"></i> Home</button>
+    <button onclick="switchTab('about')" class="nav-link"><i data-lucide="user"></i> About</button>
+    <button onclick="switchTab('projects')" class="nav-link"><i data-lucide="folder"></i> Projects</button>
+    <button onclick="switchTab('friends')" class="nav-link"><i data-lucide="users"></i> Friends</button>
+  </div>
+  <button class="nav-icon" onclick="openSettings()"><i data-lucide="settings"></i></button>
+</nav>
+
+<div class="app">
+  <div id="home" class="tab active">
+    <h1 class="fade-in">Welcome</h1>
+    <h5>KURVAAAAAAAAAAAA</h5>
+  </div>
+
+  <div id="about" class="tab">
+    <div class="profile-card">
+      <img id="bannerImg" class="profile-banner">
+      <img id="avatarBig">²
+      <div class="user-info">
+        <h2 id="username"></h2>
+        <div class="status">
+          <span id="statusDot"></span>
+          <span id="statusText"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="activityCard" class="activity-card hidden">
+      <img id="activityIcon">
+      <div>
+        <h3 id="activityName"></h3>
+        <p id="activityState"></p>
+      </div>
+    </div>
+
+    <div class="about-box">
+      <h3>About</h3>
+      <div id="aboutWord">I like</div>
+      <p id="aboutSentence">Haii, I'm Aiden, I'm 17 years old and love breaking things and remaking them better.</p>
+      <p> And i'm currently working on this page.</p>
+    </div>
+
+    <div class="social-row">
+      <a class="social-btn" href="https://discord.com/users/853310319002517524" target="_blank">
+        <i data-lucide="message-circle"></i>
+        <div><span>Discord</span><small>Profile</small></div>
+      </a>
+      <a class="social-btn">
+        <i data-lucide="twitter"></i>
+        <div><span>Twitter</span><small>Profile</small></div>
+      </a>
+      <a class="social-btn">
+        <i data-lucide="github"></i>
+        <div><span>GitHub</span><small>Repos</small></div>
+      </a>
+    </div>
+  </div>
+
+  <div id="projects" class="tab">
+    <h1>Projects</h1>
+    <p>haha no projects</p>
+  </div>
+
+  <div id="friends" class="tab">
+    <h1>Friends</h1>
+    <p>no fwiends</p>
+  </div>
+</div>
+
+<div id="settingsModal" class="modal hidden">
+  <div class="modal-box">
+    <h2>Settings</h2>
+    <p>but nobody came.</p>
+    <button onclick="closeSettings()">Close</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
